@@ -59,7 +59,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoAdapter
     public PhotoAdapterVH onCreateViewHolder(ViewGroup parent, int viewType) {
         LogUtil.Log_Error("onCreateViewHolder");
         View view = LayoutInflater.from(mContext).inflate(R.layout.vh_photo_adapter, null); // null
-        int width = parent.getWidth()/mColNum-5;
+        int width = parent.getWidth()/mColNum;
         view.setLayoutParams(new RecyclerView.LayoutParams(width, width));
         return new PhotoAdapterVH(view);
     }
