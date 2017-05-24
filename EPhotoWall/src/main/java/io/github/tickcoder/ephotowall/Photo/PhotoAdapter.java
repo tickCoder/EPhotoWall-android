@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -33,9 +34,17 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoAdapter
         }
     }
 
+    // Interface
+    public interface IPhotoAdapterActionListener {
+        void onItemClick(View view, int position);
+        void onItemSelect(View view, int position);
+        void onItemLongPress(View view, int position);
+    }
+
     private Context mContext;
     private int mColNum = 3;
     private List<PhotoInfo> mPhotoList = new ArrayList<>();
+    private IPhotoAdapterActionListener mActionListener;
 
     public PhotoAdapter(Context context, int colNum) {
         super();
@@ -48,6 +57,10 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoAdapter
         this.mContext = context;
         this.mColNum = colNum;
         this.mPhotoList.addAll(photoList);
+    }
+
+    public void setActionListener(IPhotoAdapterActionListener listener) {
+        this.mActionListener = listener;
     }
 
     @Override
