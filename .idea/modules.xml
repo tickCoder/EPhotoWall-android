@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EPhotoWall/EPhotoWall.iml" filepath="$PROJECT_DIR$/EPhotoWall/EPhotoWall.iml" />
       <module fileurl="file://$PROJECT_DIR$/EPhotoWall-android.iml" filepath="$PROJECT_DIR$/EPhotoWall-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpServer/HttpServer.iml" filepath="$PROJECT_DIR$/HttpServer/HttpServer.iml" />
     </modules>
   </component>
 </project>

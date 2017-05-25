@@ -1,1 +1,1 @@
-include ':EPhotoWall'
+include ':EPhotoWall', ':HttpServer'
